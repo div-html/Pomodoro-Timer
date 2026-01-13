@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pomodoro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="settings-container" style="display: none;">
+           <div class="settings-card" style="gap:7vw;">
+                <div class="general" style="color: white;">
+                    <p tabindex="0">General</p>
+                    <p tabindex="0">Timers</p>
+                    <p tabindex="0">Sounds</p>
+                    <button id="resetAll">Reset All</button>
+                </div>
+                <div class="theme" >
+                    <p style="color: white; margin-top: 4px;">Select Theme:</p>
+                    <select name="theme" id="theme">
+                        <option value="1">Aesthetic Tokyo</option>
+                        <option value="2">Mount Fuji </option>
+                        <option value="3">Paris</option>
+                    </select>
+                    <p class="desc" style="color: #646c74;margin-top: 5vh;">The Pomodoro Technique is a time-management method where work is done in focused 25-minute intervals called Pomodoros, followed by short breaks. After four Pomodoros, a longer break is taken. This technique improves concentration, reduces fatigue, and helps manage tasks efficiently.</p>
+                    <div class="theme-buttons">
+                        <button class="close">Close</button>
+                        <button class="saveChanges">Save Changes</button>
+
+                    </div>
+                </div>
+           </div>
+    </div>
+ 
+    <div class="btns">
+        <button class="btn1">pomodoro</button>
+        <button class="btn2">short break</button>
+        <button class="btn3">long break</button>
+    </div>
+    <p class="timer" >25:00</p>
+    <div class="start">
+        <button  class="startbtn">start</button>
+        <i id="reset" title="Reset" class="fa-solid fa-rotate-right"></i>  
+        <i id="settings" title="Settings" class="fa-solid fa-gear"></i>
+    </div>
+    <script src="pomoDoro.js"></script>
+</body>
+</html>

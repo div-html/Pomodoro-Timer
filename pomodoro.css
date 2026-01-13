@@ -9,7 +9,7 @@ body {
   background-image: url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html,

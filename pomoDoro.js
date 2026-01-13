@@ -9,7 +9,7 @@ let totalSeconds = 0;
 let settingsCard = document.querySelector(".settings-container");
 let timerId = null;
 let closeBtn=document.querySelector(".close");
-
+let audio=document.querySelector("audio");
 function updateDisplay() {
   let minutes = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds % 60;
@@ -24,6 +24,8 @@ function startTimer() {
     if (totalSeconds <= 0) {
       pauseTimer();
       start.textContent = "Start";
+      audio.volume=0.5;
+      audio.play(); 
       return;
     }
 

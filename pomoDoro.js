@@ -5,7 +5,7 @@ let timer = document.querySelector(".timer");
 let start = document.querySelector(".startbtn");
 let reset = document.querySelector("#reset");
 let settings = document.querySelector("#settings");
-let totalSeconds = 0;
+let totalSeconds = 25 * 60;
 let settingsCard = document.querySelector(".settings-container");
 let timerId = null;
 let closeBtn=document.querySelector(".close");
@@ -21,26 +21,33 @@ function updateDisplay() {
 
 function startTimer() {
   if (timerId !== null) return;
+  if (totalSeconds <= 0) return;
+
+  totalSeconds--;
+  updateDisplay();
 
   timerId = setInterval(() => {
+    totalSeconds--;
+    updateDisplay();
     if (totalSeconds <= 0) {
       pauseTimer();
       start.textContent = "Start";
       audio.volume=0.5;
-      audio.play(); 
-      return;
+      audio.play();
     }
-
-    totalSeconds--;
-    updateDisplay();
-  }, 1000);
+  }, 10);
 }
 function pauseTimer() {
   clearInterval(timerId);
   timerId = null;
 }
 reset.addEventListener("click", function () {
-  window.location.reload();
+  clearInterval(timerId);
+  timerId = null;
+  totalSeconds = 25 * 60;
+  start.textContent = "Start";
+  audio.pause();
+  updateDisplay();
 })
 btn1.addEventListener("click", () => {
   pauseTimer();

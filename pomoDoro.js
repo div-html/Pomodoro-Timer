@@ -35,7 +35,7 @@ function startTimer() {
       audio.volume=0.5;
       audio.play();
     }
-  }, 10);
+  }, 1000);
 }
 function pauseTimer() {
   clearInterval(timerId);
@@ -113,4 +113,5 @@ theme.addEventListener("change",function(){
   document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.overflow="hidden";
   }
+
 });

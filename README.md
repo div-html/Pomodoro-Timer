@@ -49,9 +49,9 @@ and use Live Server in VS Code.
 📂 Project Structure
 pomodoro-timer/
 │
-├── pomoDoroTimer.html
+├── pomodoroTimer.html
 ├── pomodoro.css
-├── pomodoroTimer.js
+├── pomoDoro.js
 └── README.md
 
 # How It Works
